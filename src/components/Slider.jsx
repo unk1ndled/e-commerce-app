@@ -11,9 +11,9 @@ const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
-      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 3);
     } else {
-      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+      setSlideIndex(slideIndex < 3 ? slideIndex + 1 : 0);
     }
   };
 
@@ -152,7 +152,7 @@ const ImgContainer = styled.div`
   margin-left: 25px;
 `;
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
   align-items: center;
   
 `;

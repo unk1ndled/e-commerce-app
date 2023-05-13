@@ -1,10 +1,10 @@
 export const sliderItems = [
   {
     id: 1,
-    img: "https://assets.vogue.com/photos/592dc7cee9009a157f18b27a/16:9/w_1280,c_limit/rick-owens-social.jpg",
-    title: "WICK ROWENS 2023 COLLECTION",
-    desc: "Latest and greatest from Mr  `` If looks could kill `` himself",
-    bg: "E7E7E7",
+    img: "https://i.pinimg.com/564x/3b/f9/cb/3bf9cba8677d0c5b5142fb78f60aa729.jpg",
+    title: "CASUAL",
+    desc: "explore our latest Casual collection",
+    bg: "B2A6A6",
   },
   {
     id: 2,
@@ -15,10 +15,17 @@ export const sliderItems = [
   },
   {
     id: 3,
-    img: "https://sneakernews.com/wp-content/uploads/2018/04/air-jordan-1-homage-to-home-release-info-2300-pairs-6.jpg",
-    title: "CHICAGO AIR GORDAN ",
-    desc: "              THEY'RE HERE !!!!!!",
+    img: "https://i.pinimg.com/564x/7e/74/02/7e7402e438d2eba2892d50b3ec593cfc.jpg",
+    title: "GORDAN ",
+    desc: "exclusive, limited edition has arrived",
     bg: "D2D2D2",
+  },
+  {
+    id: 4,
+    img: "https://i.pinimg.com/564x/8c/63/b7/8c63b75a3da7e7b1700b9f3531712e55.jpg",
+    title: "WICK ROWENS 2023 COLLECTION",
+    desc: "Latest and greatest from Mr  `` If looks could kill `` himself",
+    bg: "E7E7E7",
   },
 ];
 
@@ -64,11 +71,11 @@ export const popularProducts = [
   },
   {
     id:5,
-    img:"https://www.pngmart.com/files/13/Black-Converse-Shoes-PNG-Clipart.png",
+    img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Image.png",
   },
   {
     id:6,
-    img:"https://yowu.oss-accelerate.aliyuncs.com/04a45ce474957c82367d7960b35553188b.png",
+    img:"https://www.pngmart.com/files/22/Basic-T-Shirt-PNG-Transparent.png",
   },
   {
     id:7,
@@ -77,5 +84,37 @@ export const popularProducts = [
   {
     id:8,
     img:"https://www.pngmart.com/files/22/Baby-Doll-T-Shirt-PNG-Isolated-Pic.png",
+  },{
+    id:9,
+    img:"https://www.pngmart.com/files/13/Denim-Skirt-PNG-Photos.png",
   },
+  {
+    id:10,
+    img:"https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png",
+  },
+  {
+    id:11,
+    img:"https://www.pngmart.com/files/13/Thrasher-T-Shirt-PNG-Clipart.png",
+  },
+  {
+    id:12,
+    img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Pic.png",
+  },
+  {
+    id:13,
+    img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Image.png",
+  },
+  {
+    id:14,
+    img:"https://www.pngmart.com/files/22/Basic-T-Shirt-PNG-Transparent.png",
+  },
+  {
+    id:15,
+    img:"https://www.pngmart.com/files/6/Sweater-PNG-Transparent.png",
+  },
+  {
+    id:16,
+    img:"https://www.pngmart.com/files/22/Baby-Doll-T-Shirt-PNG-Isolated-Pic.png",
+  },
+  
 ]
