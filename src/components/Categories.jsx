@@ -19,4 +19,5 @@ const Container = styled.div`
   display: flex;
   padding: 2ex;
   justify-content: space-between;
+  
 `

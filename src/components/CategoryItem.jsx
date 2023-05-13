@@ -43,7 +43,7 @@ const Info = styled.div`
 const Title = styled.h1`
   color: black;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: #ffffff;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,7 +53,7 @@ const Title = styled.h1`
 const Button = styled.button`
   --b: 3px; /* border thickness */
   --s: 0.45em; /* size of the corner */
-  --color: #db1b1b;
+  --color: #FCA311;
   --color2: white;
 
   
@@ -62,7 +62,7 @@ const Button = styled.button`
   --_p: var(--s);
   background: conic-gradient(
       from 90deg at var(--b) var(--b),
-      #848484 90deg,
+      #000000 90deg,
       var(--color2) 0
     )
     var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))

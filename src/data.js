@@ -40,7 +40,7 @@ export const categories = [
   },
   {
     id: 4,
-    img: "https://robbreport.com/wp-content/uploads/2022/11/RR_TYLER2.jpg",
+    img: "https://i.pinimg.com/564x/bd/10/6f/bd106f48d8f126f8dc1c44440e57af3c.jpg",
     title: "Accessories",
   },
 ];

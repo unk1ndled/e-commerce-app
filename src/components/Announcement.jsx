@@ -8,7 +8,7 @@ export default Announcement;
 
 const Container = styled.div`
   height: 25px;
-  background-color: #ff1616;
+  background-color: #FCA311;
   color: #f5dada;
   display: flex;
   align-items: center;

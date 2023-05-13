@@ -10,13 +10,13 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <Logo> NIGGA </Logo>
+          <Logo> crimewave </Logo>
         </Left>
         <Center>
           
           <SearchContainer>
+            <Search style= {{color:"black",fontSize:25}} />
             <Input />
-            <Search style= {{color:"gray",fontSize:16}} />
           </SearchContainer>
         </Center>
         <Right>
@@ -24,7 +24,7 @@ const Navbar = () => {
           <MenuItem>Log-in</MenuItem>
           <MenuItem>
             <Badge badgeContent={1} color="warning" variant="dot">
-              <ShoppingCartOutlinedIcon color="action" />
+              <ShoppingCartOutlinedIcon color="warning" />
             </Badge>
           </MenuItem>
         </Right>
@@ -40,11 +40,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 `;
 
 const Container = styled.div`
   height: 60px;
-  background-color: #ffffff;
+  background-color: #000000;
 `;
 
 const Left = styled.div`
@@ -56,12 +57,13 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
+  color: white ;
 `;
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgrey;
   border-radius: 20px;
-
+  background-color:#ffffff;
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -73,10 +75,15 @@ const Input = styled.input`
   width: 100%;
   margin-left: 7px;
   margin-right: 7px;
+  color: #000000;
+  font-size: 18px;
+  background-color: #ffffff;
+  
 `;
 const Logo = styled.h1`
   font-weight: bold;
   margin-left: 25px;
+  color: white ;
 `;
 
 const Center = styled.div`
@@ -94,4 +101,5 @@ const MenuItem = styled.div`
   font-style: 14px;
   cursor: pointer;
   margin-left: 25px;
+  color: white ;
 `;
