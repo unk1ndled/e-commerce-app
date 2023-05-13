@@ -10,7 +10,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <Logo> Crimewave </Logo>
+          <Logo> NIGGA </Logo>
         </Left>
         <Center>
           
@@ -23,7 +23,7 @@ const Navbar = () => {
           <MenuItem>Sign-in</MenuItem>
           <MenuItem>Log-in</MenuItem>
           <MenuItem>
-            <Badge badgeContent={1} color="primary">
+            <Badge badgeContent={1} color="warning" variant="dot">
               <ShoppingCartOutlinedIcon color="action" />
             </Badge>
           </MenuItem>

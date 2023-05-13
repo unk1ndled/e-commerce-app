@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
-import SliderUpdated from "../components/SliderUpdated";
+import Slider from "../components/Slider";
+import Categories from "../components/Categories";
 
 
 const Home = () => {
@@ -9,7 +10,9 @@ const Home = () => {
     <div>
       <Navbar />
       <Announcement/>
-      <SliderUpdated/>
+      
+      <Categories/>
+      <Slider/>
     </div>
   );
 };
