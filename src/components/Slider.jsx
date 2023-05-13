@@ -32,6 +32,7 @@ const Slider = () => {
               <Description>{item.desc}</Description>
               <Button>Get Now!</Button>
             </TextContainer>
+            <Empty></Empty>
           </Slide>
         ))}
       </Wrapper>
@@ -109,11 +110,23 @@ const Wrapper = styled.div`
   display: flex;
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
+  
+  justify-content: space-between;
 `;
 
 const TextContainer = styled.div`
   flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
 `;
+
+const Empty = styled.div`
+  flex :1;
+  width: 30px;
+`
 
 const Title = styled.h1`
   font-size: 60px;
@@ -128,13 +141,18 @@ const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
+  justify-content: end;
   align-items: center;
   background-color: #${(props) => props.bg};
+  
 `;
 const ImgContainer = styled.div`
   height: 100%;
   flex: 1;
+  margin-left: 25px;
 `;
 const Image = styled.img`
   height: 80%;
+  align-items: center;
+  
 `;

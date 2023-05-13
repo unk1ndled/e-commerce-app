@@ -7,7 +7,7 @@ const CategoryItem = ({ item }) => {
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>SHOP NOW</Button>
+        <Button>BROWSE</Button>
       </Info>
     </Container>
   );
@@ -51,8 +51,8 @@ const Title = styled.h1`
 
 
 const Button = styled.button`
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
+  --b: 2px; /* border thickness */
+  --s: 0.8em; /* size of the corner */
   --color: #FCA311;
   --color2: white;
 
@@ -71,7 +71,7 @@ const Button = styled.button`
   outline: var(--b) solid #0000;
   outline-offset: 0.6em;
   font-size: 16px;
-
+  font-weight:bold;
   border: 0;
 
   user-select: none;

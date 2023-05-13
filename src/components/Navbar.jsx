@@ -2,20 +2,19 @@ import { Search } from "@mui/icons-material";
 import { Badge } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
           <Logo> crimewave </Logo>
+          <Language>EN</Language>
         </Left>
         <Center>
-          
           <SearchContainer>
-            <Search style= {{color:"black",fontSize:25}} />
+            <Search style={{ color: "black", fontSize: 25 }} />
             <Input />
           </SearchContainer>
         </Center>
@@ -40,7 +39,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 `;
 
 const Container = styled.div`
@@ -57,13 +55,13 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   cursor: pointer;
-  color: white ;
+  color: white;
 `;
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgrey;
   border-radius: 20px;
-  background-color:#ffffff;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -78,12 +76,11 @@ const Input = styled.input`
   color: #000000;
   font-size: 18px;
   background-color: #ffffff;
-  
 `;
 const Logo = styled.h1`
   font-weight: bold;
-  margin-left: 25px;
-  color: white ;
+  margin-right: 25px;
+  color: white;
 `;
 
 const Center = styled.div`
@@ -101,5 +98,5 @@ const MenuItem = styled.div`
   font-style: 14px;
   cursor: pointer;
   margin-left: 25px;
-  color: white ;
+  color: white;
 `;
