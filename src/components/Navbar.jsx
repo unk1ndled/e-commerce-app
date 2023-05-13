@@ -10,13 +10,14 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Language>EN</Language>
-          <SearchContainer>
-            <Input />
-            <Search />
-          </SearchContainer>
+          <Logo> Crimewave </Logo>
         </Left>
         <Center>
-          <Logo> Crimewave </Logo>
+          
+          <SearchContainer>
+            <Input />
+            <Search style= {{color:"gray",fontSize:16}} />
+          </SearchContainer>
         </Center>
         <Right>
           <MenuItem>Sign-in</MenuItem>
@@ -59,6 +60,8 @@ const Language = styled.span`
 
 const SearchContainer = styled.div`
   border: 0.5px solid lightgrey;
+  border-radius: 20px;
+
   display: flex;
   align-items: center;
   margin-left: 25px;
@@ -67,9 +70,13 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   border: none;
+  width: 100%;
+  margin-left: 7px;
+  margin-right: 7px;
 `;
 const Logo = styled.h1`
   font-weight: bold;
+  margin-left: 25px;
 `;
 
 const Center = styled.div`
