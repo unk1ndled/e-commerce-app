@@ -100,6 +100,8 @@ const Img = styled.img`
 
 const Icon = styled.div`
 
+
+  z-index: 4;
   width: 40px;
   height: 40px;
   border-radius: 50%;
