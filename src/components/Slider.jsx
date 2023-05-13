@@ -51,13 +51,14 @@ const Button = styled.button`
   padding: 10px;
   font-size: 20px;
   border-color: black;
+  border: 3px solid;
   background-color: white;
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
-  border: 3px solid;
+  
   padding: 0.25em 0.5em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
     5px 5px 0px 0px;
