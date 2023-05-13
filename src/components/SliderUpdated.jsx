@@ -7,27 +7,36 @@ const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #717171;
+  position: relative;
 `;
+
 const Arrow = styled.div`
   width: 50px;
   height: 50px;
   background-color: #e9e7e7;
-  border-radius: 50%;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  position:absolute;
+  top:0px;
+  bottom:0px;
+  left: ${(props) => (props.direction === "left-side" ? "10px" : "none")};
+  right: ${(props) => props.direction === "right-side" ? "10px" : "none"};
+
+  margin:auto;
 `;
 
-const Slider = () => {
+const SliderUpdated = () => {
   return (
     <Container>
-      <Arrow>
+      <Arrow direction="left-side">
         <ArrowBackIosNewOutlinedIcon />
       </Arrow>
-      <Arrow>
+      <Arrow direction="right-side">
         <ArrowForwardIosOutlinedIcon />
       </Arrow>
     </Container>
   );
 };
-export default Slider;
+export default SliderUpdated;

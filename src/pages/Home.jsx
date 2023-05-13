@@ -1,16 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
-import Slider from "../components/Slider";
+import SliderUpdated from "../components/SliderUpdated";
 
 
 const Home = () => {
   return (
     <div>
-      
       <Navbar />
       <Announcement/>
-      <Slider/>
+      <SliderUpdated/>
     </div>
   );
 };
