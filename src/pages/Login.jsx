@@ -45,7 +45,7 @@ font-weight: 200;
 max-width:44%;
 margin: 5px 5px;
 padding:10px;
-border 3px solid #fca311;
+border :3px solid #fca311;
 background-color: white;
 transition:all 0.8s ease;
     

@@ -5,10 +5,10 @@ import ProductsList from "./pages/ProductsList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 const App = () => {
-  // return <Home/>;
-  // return <ProductsList/>
+  //return <Home/>;
+  return <ProductsList/>
   // return <Product/>
-  return <Register/>
+  // return <Register/>
   // return <Login/>
 };
 

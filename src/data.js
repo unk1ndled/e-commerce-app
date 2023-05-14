@@ -116,5 +116,21 @@ export const popularProducts = [
     id:16,
     img:"https://www.pngmart.com/files/22/Baby-Doll-T-Shirt-PNG-Isolated-Pic.png",
   },
+  {
+    id:17,
+    img:"https://www.pngmart.com/files/13/Denim-Skirt-PNG-Photos.png",
+  },
+  {
+    id:18,
+    img:"https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png",
+  },
+  {
+    id:19,
+    img:"https://www.pngmart.com/files/13/Thrasher-T-Shirt-PNG-Clipart.png",
+  },
+  {
+    id:20,
+    img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Pic.png",
+  },
   
 ]

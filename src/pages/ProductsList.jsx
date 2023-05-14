@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Announcement from '../components/Announcement'
 import styled from 'styled-components'
 import { Newsletter } from '../components/Newsletter'
 import { Footer } from '../components/Footer'
 import Products from '../components/Products'
+import TextBar from '../components/TextBar'
 const Container = styled.div`
 `
 const Title = styled.h1`
@@ -36,7 +36,7 @@ const ProductsList = () => {
   return (
     <Container>
         <Navbar/>
-        <Announcement/>
+        <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
             <Title>Dresses</Title>
             <FilterContainer>
                 <Filter><FilterText>Filter Products</FilterText>
