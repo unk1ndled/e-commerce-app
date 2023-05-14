@@ -5,35 +5,32 @@ import styled from "styled-components";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-
-
 const Product = ({ item }) => {
 
   const navigate = useNavigate();
 
+  function handleClick() {
+    navigate({ pathname: '/product' });
+  }
+
   return (
-    <Link to="/product">
-    <Container>
-      
-      <Img src={item.img} />
-      <Info>
-        <Icon>
-          <FavoriteBorder />
-        </Icon>
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
-      </Info>
-      
-    </Container>
-    </Link>
+      <Container onClick={handleClick}>
+        <Img src={item.img} />
+        <Info>
+          <Icon>
+            <FavoriteBorder />
+          </Icon>
+          <Icon>
+            <ShoppingCartOutlined />
+          </Icon>
+        </Info>
+      </Container>
   );
 };
 
 export default Product;
 
 const Info = styled.div`
-
   opacity: 0;
   width: 100%;
   height: 100%;
@@ -101,23 +98,22 @@ const Container = styled.div`
   }
 `;
 
-
-
 const Img = styled.img`
   height: 75%;
   z-index: 2;
-  border :#000000 ;
+  border: #000000;
 `;
 
+
+
+
 const Icon = styled.div`
-
-
   z-index: 4;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: #fca311;
-  color : white;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,7 +123,7 @@ const Icon = styled.div`
     transform: scale(1.1);
   }
 
-  &:Active{
+  &:active {
     background-color: #ff1616;
   }
 `;

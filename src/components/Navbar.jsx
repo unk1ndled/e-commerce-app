@@ -11,7 +11,6 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Logo>
-            {" "}
             <Link to="/" style={{ textDecoration: 'none' }}> crimewave </Link>{" "}
           </Logo>
           <Language>EN</Language>
