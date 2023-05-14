@@ -4,7 +4,8 @@ import TextBar from "../components/TextBar";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";
 import Products from "../components/Products";
-
+import { Newsletter } from "../components/Newsletter";
+import {Footer} from "../components/Footer"
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <Slider/>
       <TextBar text ="OUR POPULAR ITEMS" size="40px"/>
       <Products/>
+      <Newsletter/>
+      <Footer/>
     </div>
   );
 };
