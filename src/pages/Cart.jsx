@@ -1,6 +1,6 @@
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
+import TextBar from "../components/TextBar";
 import {Footer} from "../components/Footer";
 import Navbar from "../components/Navbar";
 // import { mobile } from "../responsive";
@@ -150,7 +150,7 @@ const Cart = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
+      <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
