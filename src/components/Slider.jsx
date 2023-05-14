@@ -4,10 +4,12 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import styled from "styled-components";
 import { useState } from "react";
 import { sliderItems } from "../data";
-
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
-  
+  const navigate = useNavigate();
+
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
     if (direction === "left") {
@@ -19,8 +21,6 @@ const Slider = () => {
 
   return (
     <Container>
-      
-
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
           <Slide bg={item.bg} key={item.id}>
@@ -30,7 +30,9 @@ const Slider = () => {
             <TextContainer>
               <Title>{item.title}</Title>
               <Description>{item.desc}</Description>
+              <Link to="/ProductsList">
               <Button>Get Now!</Button>
+              </Link>
             </TextContainer>
             <Empty></Empty>
           </Slide>
@@ -57,7 +59,7 @@ const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
-  
+
   padding: 0.25em 0.5em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
     5px 5px 0px 0px;
@@ -76,7 +78,6 @@ const Button = styled.button`
     padding: 0.25em 0.75em;
   }
 `;
-
 
 const Container = styled.div`
   width: 100%;
@@ -109,7 +110,7 @@ const Wrapper = styled.div`
   display: flex;
   transition: all 1.5s ease;
   transform: translateX(${(props) => props.slideIndex * -100}vw);
-  
+
   justify-content: space-between;
 `;
 
@@ -123,9 +124,9 @@ const TextContainer = styled.div`
 `;
 
 const Empty = styled.div`
-  flex :1;
+  flex: 1;
   width: 30px;
-`
+`;
 
 const Title = styled.h1`
   font-size: 60px;
@@ -143,7 +144,6 @@ const Slide = styled.div`
   justify-content: end;
   align-items: center;
   background-color: #${(props) => props.bg};
-  
 `;
 const ImgContainer = styled.div`
   height: 100%;
@@ -153,5 +153,4 @@ const ImgContainer = styled.div`
 const Image = styled.img`
   height: 100%;
   align-items: center;
-  
 `;

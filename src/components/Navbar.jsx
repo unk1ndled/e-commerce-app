@@ -3,13 +3,17 @@ import { Badge } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <Container>
       <Wrapper>
         <Left>
-          <Logo> crimewave </Logo>
+          <Logo>
+            {" "}
+            <Link to="/" style={{ textDecoration: 'none' }}> crimewave </Link>{" "}
+          </Logo>
           <Language>EN</Language>
         </Left>
         <Center>
@@ -19,12 +23,18 @@ const Navbar = () => {
           </SearchContainer>
         </Center>
         <Right>
-          <MenuItem>Sign-in</MenuItem>
-          <MenuItem>Log-in</MenuItem>
           <MenuItem>
-            <Badge badgeContent={1} color="warning" variant="dot">
-              <ShoppingCartOutlinedIcon color="warning" />
-            </Badge>
+            <Link to="/login" style={{ textDecoration: 'none' }}>Sign-in</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/register" style={{ textDecoration: 'none' }}>Log-in</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/cart">
+              <Badge badgeContent={1} color="warning" variant="dot">
+                <ShoppingCartOutlinedIcon color="warning" />
+              </Badge>
+            </Link>
           </MenuItem>
         </Right>
       </Wrapper>

@@ -2,10 +2,19 @@ import React from "react";
 import { ShoppingCartOutlined } from "@mui/icons-material";
 import { FavoriteBorder } from "@material-ui/icons";
 import styled from "styled-components";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+
+
 
 const Product = ({ item }) => {
+
+  const navigate = useNavigate();
+
   return (
+    <Link to="/product">
     <Container>
+      
       <Img src={item.img} />
       <Info>
         <Icon>
@@ -15,7 +24,9 @@ const Product = ({ item }) => {
           <ShoppingCartOutlined />
         </Icon>
       </Info>
+      
     </Container>
+    </Link>
   );
 };
 

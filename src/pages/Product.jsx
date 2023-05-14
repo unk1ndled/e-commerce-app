@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
 import TextBar from "../components/TextBar";
 import { Newsletter } from "../components/Newsletter";
 import { Footer } from "../components/Footer";
@@ -96,7 +95,6 @@ const Ammount = styled.div`
 const Product = () => {
   return (
     <Container>
-      <Navbar />
       <TextBar
         text="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE"
         size="25px"

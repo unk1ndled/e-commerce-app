@@ -10,7 +10,6 @@ import {Footer} from "../components/Footer"
 const Home = () => {
   return (
     <div>
-      <Navbar />
       <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
       <Categories/>
       <Slider/>

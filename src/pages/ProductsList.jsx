@@ -35,7 +35,6 @@ const Option = styled.option``
 const ProductsList = () => {
   return (
     <Container>
-        <Navbar/>
         <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
             <Title>Dresses</Title>
             <FilterContainer>
