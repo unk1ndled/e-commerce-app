@@ -4,6 +4,54 @@ import { Newsletter } from "../components/Newsletter";
 import { Footer } from "../components/Footer";
 import { Add, Remove } from "@mui/icons-material";
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const Product = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  
+  return (
+    <Container>
+      <TextBar
+        text="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE"
+        size="25px"
+      />
+      <Wrapper>
+        <ImgContainer>
+          <Image src="https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png" />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>Title</Title>
+          <Description>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
+            expedita quasi blanditiis repudiandae nulla sed culpa molestias quis
+            vero, nobis totam natus, quas tempore illo eaque, doloribus magnam
+            vel soluta.
+          </Description>
+          <Price>22 $</Price>
+          <AddContainer>
+            <AmmountContainer>
+              <Remove />
+              <Ammount>1</Ammount>
+              <Add />
+            </AmmountContainer>
+            <Button>Add to cart</Button>
+          </AddContainer>
+        </InfoContainer>
+      </Wrapper>
+      <Newsletter />
+      <Footer />
+    </Container>
+  );
+};
+
+export default Product;
+
 const Container = styled.div``;
 const Wrapper = styled.div`
   display: flex;
@@ -92,40 +140,3 @@ const Ammount = styled.div`
   padding: 15px;
   margin: 2px 5px;
 `;
-const Product = () => {
-  return (
-    <Container>
-      <TextBar
-        text="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE"
-        size="25px"
-      />
-      <Wrapper>
-        <ImgContainer>
-          <Image src="https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png" />
-        </ImgContainer>
-        <InfoContainer>
-          <Title>Title</Title>
-          <Description>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-            expedita quasi blanditiis repudiandae nulla sed culpa molestias quis
-            vero, nobis totam natus, quas tempore illo eaque, doloribus magnam
-            vel soluta.
-          </Description>
-          <Price>22 $</Price>
-          <AddContainer>
-            <AmmountContainer>
-              <Remove />
-              <Ammount>1</Ammount>
-              <Add />
-            </AmmountContainer>
-            <Button>Add to cart</Button>
-          </AddContainer>
-        </InfoContainer>
-      </Wrapper>
-      <Newsletter />
-      <Footer />
-    </Container>
-  );
-};
-
-export default Product;

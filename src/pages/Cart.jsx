@@ -147,7 +147,9 @@ const Button = styled.button`
 `;
 
 const Cart = () => {
+  
   return (
+    
     <Container>
       <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
       <Wrapper>
