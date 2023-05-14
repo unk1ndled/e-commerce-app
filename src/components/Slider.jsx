@@ -57,7 +57,6 @@ const Button = styled.button`
   text-decoration: none;
   text-transform: uppercase;
   color: #000000;
-  cursor: pointer;
   
   padding: 0.25em 0.5em;
   box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
@@ -78,7 +77,6 @@ const Button = styled.button`
   }
 `;
 
-export {Button}
 
 const Container = styled.div`
   width: 100%;
