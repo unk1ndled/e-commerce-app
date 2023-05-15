@@ -4,11 +4,9 @@ import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutl
 import styled from "styled-components";
 import { useState } from "react";
 import { sliderItems } from "../data";
-import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 const Slider = () => {
-  const navigate = useNavigate();
 
   const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {

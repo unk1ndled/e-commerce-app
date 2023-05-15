@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { EqualHeight } from "react-equal-height";
 
 // import bgImage from "./images/bgRegister.jpg"
 

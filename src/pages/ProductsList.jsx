@@ -1,10 +1,53 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import styled from 'styled-components'
 import { Newsletter } from '../components/Newsletter'
 import { Footer } from '../components/Footer'
 import Products from '../components/Products'
 import TextBar from '../components/TextBar'
+
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const ProductsList = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+  return (
+    <Container>
+        <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
+            <Title>Sweats</Title>
+            <FilterContainer>
+                <Filter><FilterText>Filter Products</FilterText>
+                    <Select>
+                        <Option disabled selected>Colors</Option>
+                        <Option>white</Option>
+                        <Option>black</Option>
+                        <Option>blue</Option>
+                        <Option>colors</Option>
+                    </Select>
+                </Filter>
+                <Filter><FilterText>Sorting products</FilterText>
+                    <Select>
+                        <Option selected disabled>Newest</Option>
+                        <Option>cheapest first</Option>
+                        <Option>expensive first</Option>
+                    </Select>
+                </Filter>
+            </FilterContainer>
+            <Products/>
+            <Newsletter/>
+            <Footer/>
+        
+    </Container >
+
+  )
+}
+
+
+
+
 const Container = styled.div`
 `
 const Title = styled.h1`
@@ -32,36 +75,6 @@ const Select = styled.select`
 `
 const Option = styled.option``
 
-const ProductsList = () => {
-  return (
-    <Container>
-        <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
-            <Title>Dresses</Title>
-            <FilterContainer>
-                <Filter><FilterText>Filter Products</FilterText>
-                    <Select>
-                        <Option disabled selected>Colors</Option>
-                        <Option>white</Option>
-                        <Option>black</Option>
-                        <Option>blue</Option>
-                        <Option>colors</Option>
-                    </Select>
-                </Filter>
-                <Filter><FilterText>Sorting products</FilterText>
-                    <Select>
-                        <Option selected disabled>Newest</Option>
-                        <Option>cheapest first</Option>
-                        <Option>expensive first</Option>
-                    </Select>
-                </Filter>
-            </FilterContainer>
-            <Products/>
-            <Newsletter/>
-            <Footer/>
-        
-    </Container >
 
-  )
-}
 
 export default ProductsList

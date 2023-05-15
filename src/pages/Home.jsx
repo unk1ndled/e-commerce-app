@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import TextBar from "../components/TextBar";
 import Slider from "../components/Slider";
 import Categories from "../components/Categories";

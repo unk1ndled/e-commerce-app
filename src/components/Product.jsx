@@ -3,7 +3,6 @@ import { ShoppingCartOutlined } from "@mui/icons-material";
 import { FavoriteBorder } from "@material-ui/icons";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
 
 const Product = ({ item }) => {
 
