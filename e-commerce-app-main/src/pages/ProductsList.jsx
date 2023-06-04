@@ -29,7 +29,7 @@ const ProductsList = () => {
   return (
     <Container>
         <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
-            <Title>Sweats</Title>
+            <Title>{cat}</Title>
             <FilterContainer>
                 <Filter  onChange={handleFilters}><FilterText>Filter Products</FilterText>
                     <Select name="color">
@@ -37,7 +37,6 @@ const ProductsList = () => {
                         <Option>white</Option>
                         <Option>black</Option>
                         <Option>blue</Option>
-                        <Option>colors</Option>
                     </Select>
                 </Filter>
                 <Filter ><FilterText>Sorting products</FilterText>

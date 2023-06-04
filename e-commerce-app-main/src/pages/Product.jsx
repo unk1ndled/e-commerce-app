@@ -4,18 +4,46 @@ import { Newsletter } from "../components/Newsletter";
 import { Footer } from "../components/Footer";
 import { Add, Remove } from "@mui/icons-material";
 
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { publicRequest } from "../requestMethods";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { addProduct } from "../redux/cartRedux";
+
+import { useDispatch } from "react-redux";
 
 const Product = () => {
-
   const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const dispatch = useDispatch();
+  const [product, setProduct] = useState({});
+  const [quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState("");
+
+  useEffect(() => {
+    const getProduct = async () => {
+      try {
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data);
+      } catch {}
+    };
+    getProduct();
+  }, [id]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
 
-  
+  const handleQuantity = (type) => {
+    if (type === "dec") {
+      quantity > 1 && setQuantity(quantity - 1);
+    } else {
+      setQuantity(quantity + 1);
+    }
+  };
+  const handleClick = () => {
+    dispatch(addProduct({ ...product, quantity, size }));
+  };
+
   return (
     <Container>
       <TextBar
@@ -24,24 +52,28 @@ const Product = () => {
       />
       <Wrapper>
         <ImgContainer>
-          <Image src="https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png" />
+          <Image src={product.img} />
         </ImgContainer>
         <InfoContainer>
-          <Title>Title</Title>
-          <Description>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-            expedita quasi blanditiis repudiandae nulla sed culpa molestias quis
-            vero, nobis totam natus, quas tempore illo eaque, doloribus magnam
-            vel soluta.
-          </Description>
-          <Price>22 $</Price>
+          <Title>{product.title}</Title>
+          <Description>{product.desc}</Description>
+
+          <Filter>
+            <FilterTitle>Size</FilterTitle>
+            <FilterSize onChange={(e) => setSize(e.target.value)}>
+              {product.size?.map((s) => (
+                <FilterSizeOption key={s}>{s}</FilterSizeOption>
+              ))}
+            </FilterSize>
+          </Filter>
+          <Price>Price : {product.price} DH</Price>
           <AddContainer>
-            <AmmountContainer>
-              <Remove />
-              <Ammount>1</Ammount>
-              <Add />
-            </AmmountContainer>
-            <Button>Add to cart</Button>
+            <AmountContainer>
+              <Remove onClick={() => handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <Add onClick={() => handleQuantity("inc")} />
+            </AmountContainer>
+            <Button onClick={handleClick}>ADD TO CART</Button>
           </AddContainer>
         </InfoContainer>
       </Wrapper>
@@ -76,7 +108,8 @@ const InfoContainer = styled.div`
   padding: 22px;
 `;
 const Title = styled.h2`
-  font-weight: 200;
+  font-weight: 500;
+  font-size: 50px;
 `;
 const Description = styled.p``;
 const Price = styled.span`
@@ -87,7 +120,7 @@ const AddContainer = styled.div`
   display: flex;
   margin-top: 20px;
 `;
-const AmmountContainer = styled.div`
+const AmountContainer = styled.div`
   display: flex;
   align-items: center;
   font-weight: 300;
@@ -133,11 +166,28 @@ const Button = styled.button`
   }
 `;
 
-const Ammount = styled.div`
+const Amount = styled.div`
   display: flex;
-  border-radius: 14px;
-  border: 2px solid teal;
+  border: 5px solid;
+  border-color: #fca311;
   align-items: center;
   padding: 15px;
   margin: 2px 5px;
+  font-size: 30px;
+`;
+
+const FilterSize = styled.select`
+  margin-left: 10px;
+  padding: 5px;
+`;
+
+const FilterSizeOption = styled.option``;
+const Filter = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const FilterTitle = styled.span`
+  font-size: 20px;
+  font-weight: 200;
 `;

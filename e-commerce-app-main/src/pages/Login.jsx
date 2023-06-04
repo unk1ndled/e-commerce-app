@@ -64,7 +64,7 @@ function Login() {
             <Form>
                 <Input placeholder="Email"></Input>
                 <Input placeholder="Password"></Input>
-                <Button>Sign In</Button>
+                <Button>Log-in</Button>
             </Form>
         </Wrapper>
     </Component>

@@ -28,7 +28,7 @@ const Slider = () => {
             <TextContainer>
               <Title>{item.title}</Title>
               <Description>{item.desc}</Description>
-              <Link to="/ProductsList">
+              <Link to="/productslist">
               <Button>Get Now!</Button>
               </Link>
             </TextContainer>

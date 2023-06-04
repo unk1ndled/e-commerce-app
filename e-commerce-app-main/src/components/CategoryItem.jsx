@@ -5,7 +5,7 @@ import styled from "styled-components";
 const CategoryItem = ({ item }) => {
   return (
     <Container>
-      <Link to={`products/${item.title}`}>
+      <Link to={`productslist/${item.cat}`}>
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>

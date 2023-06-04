@@ -33,22 +33,28 @@ export const categories = [
   {
     id: 1,
     img: "https://www.highsnobiety.com/static-assets/thumbor/6ZMgo3zUj8LYrLeDp8Dq1UtXcAs=/1600x2401/www.highsnobiety.com/static-assets/wp-content/uploads/2022/10/03134028/balenciaga-adidas-collab-release-date-new-001.jpg",
-    title: "Sweats",
+    title: "MEN",
+    cat:"man"
   },
   {
     id: 2,
     img: "https://i.pinimg.com/originals/54/34/d6/5434d61d51e6e8949ad3b76229d3a1da.jpg",
-    title: "Jackets",
+    title: "HOODIES",
+    cat:"hoodie"
   },
   {
     id: 3,
     img: "https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:70/compress/TxRTXOhYSGCKIN1c7yia",
-    title: "Boots",
+    title: "WOMEN",
+    cat:"woman"
+
   },
   {
     id: 4,
     img: "https://i.pinimg.com/564x/bd/10/6f/bd106f48d8f126f8dc1c44440e57af3c.jpg",
-    title: "Accessories",
+    title: "SHIRTS",
+    cat:"shirt"
+
   },
 ];
 
@@ -56,22 +62,34 @@ export const popularProducts = [
   {
     id:1,
     img:"https://www.pngmart.com/files/13/Denim-Skirt-PNG-Photos.png",
+    cat:"woman",
+    title:"fuck"
+
   },
   {
     id:2,
     img:"https://www.pngmart.com/files/22/Crewneck-Or-Classic-T-Shirt-PNG-Isolated-HD.png",
+    cat:"woman",
+    title:"fuck"
   },
   {
     id:3,
     img:"https://www.pngmart.com/files/13/Thrasher-T-Shirt-PNG-Clipart.png",
+    cat:"woman",
+    title:"fuck"
   },
   {
     id:4,
     img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Pic.png",
+    cat:"woman",
+    title:"fuck"
   },
   {
     id:5,
     img:"https://www.pngmart.com/files/22/Embellished-T-Shirt-PNG-Image.png",
+    
+    title:"fuck",
+    cat:"woman"
   },
   {
     id:6,

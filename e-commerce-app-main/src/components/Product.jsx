@@ -3,27 +3,31 @@ import { ShoppingCartOutlined } from "@mui/icons-material";
 import { FavoriteBorder } from "@material-ui/icons";
 import styled from "styled-components";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Product = ({ item }) => {
-
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate({ pathname: '/product' });
+    navigate({ pathname: `/product/${item}` });
   }
 
   return (
-      <Container onClick={handleClick}>
-        <Img src={item.img} />
-        <Info>
+    
+    <Container>
+      <Img src={item.img} />
+      <Info>
+      <Link to = {`/product/${item._id}`}>
           <Icon>
             <FavoriteBorder />
           </Icon>
-          <Icon>
-            <ShoppingCartOutlined />
-          </Icon>
-        </Info>
-      </Container>
+          </Link>
+
+        <Icon>
+          <ShoppingCartOutlined />
+        </Icon>
+      </Info>
+    </Container>
   );
 };
 
@@ -102,9 +106,6 @@ const Img = styled.img`
   z-index: 2;
   border: #000000;
 `;
-
-
-
 
 const Icon = styled.div`
   z-index: 4;

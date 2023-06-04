@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Categories = () => {
   return (
-    <Link to="/ProductsList">
+    <Link to="/productslist">
     <Container>
       {categories.map((item)=>{
         return <CategoryItem item = {item} id ={item.id}/>

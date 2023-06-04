@@ -4,8 +4,11 @@ import React from "react";
 import styled from "styled-components";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const quantity = useSelector(state=>state.cart.quantity)
+
   return (
     <Container>
       <Wrapper>
@@ -23,14 +26,14 @@ const Navbar = () => {
         </Center>
         <Right>
           <MenuItem>
-            <Link to="/login" style={{ textDecoration: 'none' }}>Sign-in</Link>
+            <Link to="/login" style={{ textDecoration: 'none' }}>Log-in</Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/register" style={{ textDecoration: 'none' }}>Log-in</Link>
+            <Link to="/register" style={{ textDecoration: 'none' }}>register</Link>
           </MenuItem>
           <MenuItem>
             <Link to="/cart">
-              <Badge badgeContent={1} color="warning" variant="dot">
+              <Badge badgeContent={quantity} >
                 <ShoppingCartOutlinedIcon color="warning" />
               </Badge>
             </Link>
