@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Newsletter } from '../components/Newsletter'
 import { Footer } from '../components/Footer'
@@ -10,33 +10,45 @@ import { useLocation } from 'react-router-dom';
 
 const ProductsList = () => {
   const location = useLocation();
-
+  const cat=location.pathname.split("/")[2];
+    console.log(location)
+    console.log(cat)
+    const [filters,setFilter]=useState({});
+    const [sort,setSort]=useState("Newest");
+    const handleFilters = (e)=>{
+        const value=e.target.value;
+        setFilter({
+            ...filters,
+            [e.target.name]:value}); 
+    }
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+  console.log(filters)
+  console.log(sort)
   return (
     <Container>
         <TextBar text ="EXCLUSIVE !!!  buy 10 receive 1 tux for FREE" size="25px"/>
             <Title>Sweats</Title>
             <FilterContainer>
-                <Filter><FilterText>Filter Products</FilterText>
-                    <Select>
-                        <Option disabled selected>Colors</Option>
+                <Filter  onChange={handleFilters}><FilterText>Filter Products</FilterText>
+                    <Select name="color">
+                        <Option disabled >Colors</Option>
                         <Option>white</Option>
                         <Option>black</Option>
                         <Option>blue</Option>
                         <Option>colors</Option>
                     </Select>
                 </Filter>
-                <Filter><FilterText>Sorting products</FilterText>
-                    <Select>
-                        <Option selected disabled>Newest</Option>
-                        <Option>cheapest first</Option>
-                        <Option>expensive first</Option>
+                <Filter ><FilterText>Sorting products</FilterText>
+                    <Select onChange={(e)=>setSort(e.target.value)}>
+                        <Option value="newest" disabled>Newest</Option>
+                        <Option value="asc">cheapest first</Option>
+                        <Option value="desc">expensive first</Option>
                     </Select>
                 </Filter>
             </FilterContainer>
-            <Products/>
+            <Products cat={cat} filters={filters} sort={sort}/>
             <Newsletter/>
             <Footer/>
         

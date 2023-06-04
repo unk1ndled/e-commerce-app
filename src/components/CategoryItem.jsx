@@ -1,14 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CategoryItem = ({ item }) => {
   return (
     <Container>
+      <Link to={`products/${item.title}`}>
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
         <Button>BROWSE</Button>
       </Info>
+      </Link>
     </Container>
   );
 };
