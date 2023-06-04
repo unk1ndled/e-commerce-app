@@ -5,12 +5,12 @@ const verifyToken = (req, res, next) => {
   if (authHeader) {
     const token = authHeader.split(" ")[1];
     jwt.verify(token, process.env.JWT_SEC, (err, user) => {
-      if (err) res.status(403).json("Token is not valid!");
+      if (err) res.status(403).json("Token aint valid !!");
       req.user = user;
       next();
     });
   } else {
-    return res.status(401).json("You are not authenticated!");
+    return res.status(401).json("Yaint authenticated!");
   }
 };
 
@@ -19,7 +19,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       next();
     } else {
-      res.status(403).json("You are not alowed to do that!");
+      res.status(403).json("Yaint alowed to do that!");
     }
   });
 };
