@@ -1,4 +1,7 @@
+import { useState } from "react"
 import styled from "styled-components"
+import { useDispatch, useSelector } from "react-redux"
+import { login } from "../redux/apiCalls"
 // import bgImage from "./images/bgRegister.jpg"
 
 const Component = styled.div`
@@ -47,6 +50,10 @@ margin: 5px 5px;
 padding:10px;
 border :3px solid #fca311;
 background-color: white;
+    &disabled{
+        color:green;
+        cursor:not-allowed
+    }
 transition:all 0.8s ease;
     
     &:hover{
@@ -54,17 +61,29 @@ transition:all 0.8s ease;
         color:white;        
     }
 `
+const Error = styled.span`
+    color:red;
+`
 
-
-function Login() {
+const Login = () => {
+    const [username,setUsername]=useState("");
+    const [password,setPassword]=useState("");
+    const dispatch = useDispatch();
+    const {isFetching, error} = useSelector((state)=>state.user);
+    // console.log("isFetching",isFetching);
+    const handleClick = (e)=>{
+        e.preventDefault()
+        login(dispatch,{username,password});
+    }
   return (
     <Component>
         <Wrapper>
             <Title>Welcome again...</Title>
             <Form>
-                <Input placeholder="Email"></Input>
-                <Input placeholder="Password"></Input>
-                <Button>Log-in</Button>
+                <Input placeholder="username" onChange={(e)=>setUsername(e.target.value)}></Input>
+                <Input type="password" placeholder="password" onChange={(e)=>setPassword(e.target.value)}></Input>
+                <Button onClick={handleClick} disabled={isFetching}>Log-in</Button>
+                {error && <Error>Something is wrong..</Error>}
             </Form>
         </Wrapper>
     </Component>
