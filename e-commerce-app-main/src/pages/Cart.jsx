@@ -174,6 +174,7 @@ const Cart = ({}) => {
         <Bottom>
           <Info>
             {cart.products.map((product) => (
+              
               <Product>
                 <ProductDetail>
                   <Image src={product.img} />
@@ -199,6 +200,8 @@ const Cart = ({}) => {
                   <ProductPrice>
                     $ {product.price * product.quantity}
                   </ProductPrice>
+                  
+
                 </PriceDetail>
               </Product>
             ))}
@@ -230,6 +233,7 @@ const Cart = ({}) => {
   );
 };
 
+
 const mapStateToProps = (state) => ({
   cart: state.cart,
 });
@@ -240,6 +244,8 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
 
-//<TopButton onClick={() => handleRemoveProduct(product._id)}>
-//  Cancel
-//</TopButton>
+
+                  //<TopButton onClick={() => handleRemoveProduct(product._id)}>
+                  //  Cancel
+                  //</TopButton>
+
