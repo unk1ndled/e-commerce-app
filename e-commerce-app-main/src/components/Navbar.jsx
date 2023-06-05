@@ -7,14 +7,17 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {
-  const quantity = useSelector(state=>state.cart.quantity)
+  const quantity = useSelector((state) => state.cart.quantity);
 
   return (
     <Container>
       <Wrapper>
         <Left>
           <Logo>
-            <Link to="/" style={{ textDecoration: 'none' }}> crimewave </Link>{" "}
+            <Link to="/" style={{ textDecoration: "none" }}>
+              {" "}
+              crimewave{" "}
+            </Link>{" "}
           </Logo>
           <Language>EN</Language>
         </Left>
@@ -26,18 +29,24 @@ const Navbar = () => {
         </Center>
         <Right>
           <MenuItem>
-            <Link to="/login" style={{ textDecoration: 'none' }}>Log-in</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/register" style={{ textDecoration: 'none' }}>register</Link>
-          </MenuItem>
-          <MenuItem>
-            <Link to="/cart">
-              <Badge badgeContent={quantity} >
-                <ShoppingCartOutlinedIcon color="warning" />
-              </Badge>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              Log-in
             </Link>
           </MenuItem>
+          <MenuItem>
+            <Link to="/register" style={{ textDecoration: "none" }}>
+              register
+            </Link>
+          </MenuItem>
+          <Link to="/cart">
+            <MenuItem>
+              <Link to="/cart">
+                <Badge badgeContent={quantity}>
+                  <ShoppingCartOutlinedIcon color="warning" />
+                </Badge>
+              </Link>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
