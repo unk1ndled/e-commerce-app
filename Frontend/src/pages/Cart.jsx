@@ -154,6 +154,9 @@ const Cart = ({}) => {
   const handleRemoveProduct = (productId) => {
     dispatch(removeProduct(productId));
   };
+  const handlelogout =()=>{
+    localStorage.clear();
+  }
 
   return (
     <Container>
@@ -164,7 +167,7 @@ const Cart = ({}) => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <TopButton onClick={()=>handlelogout()}>LOGOUT</TopButton>
           {/* <TopTexts> */}
           <TopText>Shopping Bag(2)</TopText>
           <TopText>Your Wishlist (0)</TopText>
