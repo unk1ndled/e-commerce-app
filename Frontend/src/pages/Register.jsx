@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { register } from "../redux/apiCalls";
+import { useState } from "react";
 
 // import bgImage from "./images/bgRegister.jpg"
 
@@ -49,21 +51,31 @@ const Button = styled.button`
   }
 `;
 
-
-
 const Register = () => {
+  const [username,setUsername] = useState("");
+  const [email,setMail] = useState("");
+  const [password,setPassword] = useState("");
+  const handleRegister = (e)=>{
+    e.preventDefault();
+    console.log("hellooooooo")
+    console.log(username,email,password)
+
+    const res = register({username,email,password});
+    console.log(res)
+
+  }
   return (
     <Component>
       
       <Wrapper>
         <Title>Register here </Title>
         <Form>
-          <Input placeholder="First Name"></Input>
+          <Input placeholder="First Name" onChange={(e)=>setUsername(e.target.value)}></Input>
           <Input placeholder="Last Name"></Input>
-          <Input placeholder="Email"></Input>
+          <Input placeholder="Email" onChange={(e)=>setMail(e.target.value)}></Input>
           <Input placeholder="Password"></Input>
-          <Input placeholder="Confirm password"></Input>
-          <Button>Create Account</Button>
+          <Input placeholder="Confirm password" onChange={(e)=>setPassword(e.target.value)}></Input>
+          <Button onClick={handleRegister}>Create Account</Button>
         </Form>
       </Wrapper>
     </Component>

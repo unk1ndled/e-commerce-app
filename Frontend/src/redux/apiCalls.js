@@ -9,4 +9,13 @@ export const login = async (dispatch, user) => {
   } catch (err) {
     dispatch(loginFailure());
   }
+
 };
+export const register = async (newuser)=>{
+  try{
+    const ress = await publicRequest.post("/auth/register", newuser);
+
+  }catch(err){
+    console.log("can not add user");
+  }
+}
