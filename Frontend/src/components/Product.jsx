@@ -13,19 +13,14 @@ const Product = ({ item }) => {
   }
 
   return (
-    
     <Container>
       <Img src={item.img} />
       <Info>
-      <Link to = {`/product/${item._id}`}>
+        <Link to={`/product/${item._id}`}>
           <Icon>
             <FavoriteBorder />
           </Icon>
-          </Link>
-
-        <Icon>
-          <ShoppingCartOutlined />
-        </Icon>
+        </Link>
       </Info>
     </Container>
   );
@@ -109,9 +104,9 @@ const Img = styled.img`
 
 const Icon = styled.div`
   z-index: 4;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
   background-color: #fca311;
   color: white;
   display: flex;

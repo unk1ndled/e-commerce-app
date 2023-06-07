@@ -5,10 +5,9 @@ import { login } from "../redux/apiCalls"
 // import bgImage from "./images/bgRegister.jpg"
 
 const Component = styled.div`
-    height:100vh;
-    width:100wh;
+    height:95vh;
     display:flex;
-    background:url("https://images.pexels.com/photos/2043590/pexels-photo-2043590.jpeg") center;
+    background:url("https://cutewallpaper.org/21x/95vqhw3dv/Fire-Flower-iPhone-Wallpaper-ID-24865.jpg") center;
     justify-content:center;
     align-items:center;
 `
@@ -30,7 +29,7 @@ const Wrapper = styled.div`
     width:40%;
     flex-wrap:wrap;
     background-color:white;
-    border: 10px solid #fca311 ;
+    border: 10px solid #000000 ;
 `
 const Title = styled.h2``
 const Input = styled.input`

@@ -34,7 +34,35 @@ const TopButton = styled.button`
   background-color: ${(props) =>
     props.type === "filled" ? "black" : "transparent"};
   color: ${(props) => props.type === "filled" && "white"};
+  padding: 10px;
+  font-size: 20px;
+  border-color: black;
+  border: 3px solid;
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &:active {
+    box-shadow: 0px 0px 0px 0px;
+    top: 5px;
+    left: 5px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0.25em 0.75em;
+  }
 `;
+
 
 const TopText = styled.span`
   text-decoration: underline;
@@ -115,6 +143,14 @@ const Hr = styled.hr`
   height: 1px;
 `;
 
+const Itemcontainer = styled.div`
+  border: 0.5px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom:10px;
+  margin-right:10px;
+`;
+
 const Summary = styled.div`
   flex: 1;
   border: 0.5px solid lightgray;
@@ -154,9 +190,9 @@ const Cart = ({}) => {
   const handleRemoveProduct = (productId) => {
     dispatch(removeProduct(productId));
   };
-  const handlelogout =()=>{
+  const handlelogout = () => {
     localStorage.clear();
-  }
+  };
 
   return (
     <Container>
@@ -167,17 +203,12 @@ const Cart = ({}) => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton onClick={()=>handlelogout()}>LOGOUT</TopButton>
-          {/* <TopTexts> */}
-          <TopText>Shopping Bag(2)</TopText>
-          <TopText>Your Wishlist (0)</TopText>
-          {/* </TopTexts> */}
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <TopButton onClick={() => handlelogout()}>LOGOUT</TopButton>
         </Top>
         <Bottom>
           <Info>
             {cart.products.map((product) => (
-              
+              <Itemcontainer>
               <Product>
                 <ProductDetail>
                   <Image src={product.img} />
@@ -203,10 +234,9 @@ const Cart = ({}) => {
                   <ProductPrice>
                     $ {product.price * product.quantity}
                   </ProductPrice>
-                  
-
                 </PriceDetail>
               </Product>
+              </Itemcontainer>
             ))}
           </Info>
           <Summary>
@@ -217,11 +247,11 @@ const Cart = ({}) => {
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice> 5.90 DH</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemPrice> -5.90 DH</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
@@ -236,7 +266,6 @@ const Cart = ({}) => {
   );
 };
 
-
 const mapStateToProps = (state) => ({
   cart: state.cart,
 });
@@ -247,8 +276,6 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
 
-
-                  //<TopButton onClick={() => handleRemoveProduct(product._id)}>
-                  //  Cancel
-                  //</TopButton>
-
+//<TopButton onClick={() => handleRemoveProduct(product._id)}>
+//  Cancel
+//</TopButton>
